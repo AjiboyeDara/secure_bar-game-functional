@@ -1,1 +1,33 @@
+# Godot-specific
+.import/
+.export/
+mono/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Godot cache files
+*.tmp
+*.converted.*
+*.translation
+*.flags
+
+# Build artifacts
+/build/
+*.pck
+*.exe
+*.dll
+*.so
+*.dylib
+
+# VS Code / JetBrains IDE
+.vscode/
+.idea/
+
+# OS/Editor backups
+*.log
+*.bak
+*.swp
 
