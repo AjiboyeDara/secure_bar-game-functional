@@ -1,5 +1,4 @@
 extends Node2D
-
 # CONSTANTS AND VARIABLES
 # The maximum health value of the bar
 const MAX_HEALTH = 100
@@ -49,10 +48,10 @@ func _ready() -> void:
 
 	# Define button styles: dark gray by default, white on hover
 	var normal_style := StyleBoxFlat.new()
-	normal_style.bg_color = Color("#262626")
-
+	normal_style.bg_color = Color("#1F1F1F")  # Dark gray
+	#changed hex code
 	var hover_style := StyleBoxFlat.new()
-	hover_style.bg_color = Color("ffffff")
+	hover_style.bg_color = Color("ffffff")    # White
 
 	# Apply styles to all three buttons
 	for button in [increase_button, pause_button, decrease_button]:
@@ -74,7 +73,7 @@ func set_health_bar() -> void:
 		bar.add_theme_stylebox_override("fill", yellow_style)
 	elif percentage > 25:
 		bar.add_theme_stylebox_override("fill", orange_style)
-	elif percentage > 10:
+	elif percentage > 5:
 		bar.add_theme_stylebox_override("fill", red_style)
 	else:
 		bar.add_theme_stylebox_override("fill", dark_red_style)
